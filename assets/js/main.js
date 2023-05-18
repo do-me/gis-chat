@@ -1,30 +1,31 @@
+$(document).ready(function() {
+
 (function($) {
-			// Breakpoints.
-			breakpoints({
-				xlarge:  [ '1281px',  '1800px' ],
-				large:   [ '981px',   '1280px' ],
-				medium:  [ '737px',   '980px'  ],
-				small:   [ '481px',   '736px'  ],
-				xsmall:  [ null,      '480px'  ],
-			});
-	
-			var $window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$footer = $('#footer'),
-			$main = $('#main')
-	
-			// Footer.
-			breakpoints.on('<=medium', function() {
-				$footer.insertAfter($main);
-			});
-	
-			breakpoints.on('>medium', function() {
-				$footer.appendTo($header);
-			});
+	// Breakpoints.
+	breakpoints({
+		xlarge:  [ '1281px',  '1800px' ],
+		large:   [ '981px',   '1280px' ],
+		medium:  [ '737px',   '980px'  ],
+		small:   [ '481px',   '736px'  ],
+		xsmall:  [ null,      '480px'  ],
+	});
+
+	var $window = $(window),
+	$body = $('body'),
+	$header = $('#header'),
+	$footer = $('#footer'),
+	$main = $('#main')
+
+	// Footer.
+	breakpoints.on('<=medium', function() {
+		$footer.insertAfter($main);
+	});
+
+	breakpoints.on('>medium', function() {
+		$footer.appendTo($header);
+	});
 })(jQuery);
 
-$(document).ready(function() {
 
 // Check if there's any override. If so, let the markup know by setting an attribute on the <html> element
 const colorModeOverride = window.localStorage.getItem('color-mode');
