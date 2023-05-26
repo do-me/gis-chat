@@ -66,9 +66,9 @@ mediaQuery.addListener(() => {
 
 // dark mode end
 
-var tileLayerUrl = 'https://gisco-services.ec.europa.eu/maps/tiles/OSMCartoComposite/EPSG3857/{z}/{x}/{y}.png';
+var tileLayerUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 var tileLayerOptions = {
-attribution: '&copy; <a href="https://ec.europa.eu/eurostat/web/gisco/">Eurostat</a>',
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 maxZoom: 18,
 };
 if (map != undefined) { map.remove(); }
